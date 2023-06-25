@@ -1,0 +1,247 @@
+
+  "ids": {
+    "modelId": "RC 110",
+    "manufacturerName": "innr"
+  },
+  "endpoints": {
+    "endpointDescriptors": [
+      {
+        "endpointId": 1,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2096,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 2,
+        "inputClusters": [
+          0,
+          4
+        ],
+        "outputClusters": [
+          0,
+          4,
+          3,
+          6,
+          8,
+          5,
+          25
+        ]
+      },
+      {
+        "endpointId": 2,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 4096,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 2,
+        "inputClusters": [
+          4096
+        ],
+        "outputClusters": [
+          4096
+        ]
+      },
+      {
+        "endpointId": 3,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2080,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [
+          4,
+          5
+        ],
+        "outputClusters": [
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "endpointId": 4,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2080,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [
+          4,
+          5
+        ],
+        "outputClusters": [
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "endpointId": 5,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2080,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [
+          4,
+          5
+        ],
+        "outputClusters": [
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "endpointId": 6,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2080,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [
+          4,
+          5
+        ],
+        "outputClusters": [
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "endpointId": 7,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2080,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [
+          4,
+          5
+        ],
+        "outputClusters": [
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "endpointId": 8,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2080,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [
+          4,
+          5
+        ],
+        "outputClusters": [
+          3,
+          6,
+          8
+        ]
+      }
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": {
+          "basic": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "groups": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      },
+      "2": {
+        "clusters": {
+          "touchlink": {
+            "attributes": "TIMEOUT",
+            "commandsGenerated": "TIMEOUT",
+            "commandsReceived": "TIMEOUT"
+          }
+        }
+      },
+      "3": {
+        "clusters": {
+          "groups": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      },
+      "4": {
+        "clusters": {
+          "groups": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      },
+      "5": {
+        "clusters": {
+          "groups": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      },
+      "6": {
+        "clusters": {
+          "groups": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      },
+      "7": {
+        "clusters": {
+          "groups": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      },
+      "8": {
+        "clusters": {
+          "groups": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": "UNSUP_GENERAL_COMMAND",
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      }
+    }
+  }

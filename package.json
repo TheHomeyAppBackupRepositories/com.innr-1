@@ -1,0 +1,27 @@
+{
+  "name": "com.innr",
+  "version": "2.0.8",
+  "description": "This app allows you to connect your INNR Devices to Homey",
+  "main": "app.js",
+  "dependencies": {
+    "@athombv/data-types": "^1.0.6",
+    "homey-meshdriver": "^1.3.24",
+    "homey-zigbeedriver": "^1.6.7",
+    "zigbee-clusters": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "run": "homeyConfig compose && athom project --run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasteleman/com.innr"
+  },
+  "author": "Martin Brassé",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasteleman/innr/issues"
+  },
+  "homepage": "https://github.com/kasteleman/innr#readme"
+}

@@ -1,0 +1,613 @@
+
+  "ids": {
+    "modelId": "RF 265",
+    "manufacturerName": "innr"
+  },
+  "endpoints": {
+    "endpointDescriptors": [
+      {
+        "endpointId": 1,
+        "applicationProfileId": 260,
+        "applicationDeviceId": 257,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 1,
+        "inputClusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          2821,
+          4096,
+          64642
+        ],
+        "outputClusters": [
+          25
+        ]
+      },
+      {
+        "endpointId": 242,
+        "applicationProfileId": 41440,
+        "applicationDeviceId": 97,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [],
+        "outputClusters": [
+          33
+        ]
+      }
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": {
+          "basic": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 0,
+                "name": "zclVersion",
+                "value": 3
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 1,
+                "name": "appVersion",
+                "value": 16
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 2,
+                "name": "stackVersion",
+                "value": 101
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 3,
+                "name": "hwVersion",
+                "value": 1
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 4,
+                "name": "manufacturerName",
+                "value": "innr"
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 5,
+                "name": "modelId",
+                "value": "RF 265"
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 6,
+                "name": "dateCode",
+                "value": "20190705-350"
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 7,
+                "name": "powerSource",
+                "value": "mains"
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 8,
+                "name": "appProfileVersion",
+                "value": 0
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 9
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 10
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 11
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 18,
+                "name": "deviceEnabled",
+                "value": true
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 16384,
+                "name": "swBuildId",
+                "value": "2.1"
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [],
+            "commandsReceived": [
+              "factoryReset"
+            ]
+          },
+          "identify": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 0
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [
+              0
+            ],
+            "commandsReceived": [
+              0,
+              1,
+              64
+            ]
+          },
+          "groups": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 0,
+                "name": "nameSupport",
+                "value": {
+                  "type": "Buffer",
+                  "data": [
+                    0
+                  ]
+                }
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [
+              "addGroup.response",
+              "viewGroup.response",
+              "getGroupMembership.response",
+              "removeGroup.response"
+            ],
+            "commandsReceived": [
+              "addGroup",
+              "viewGroup",
+              "getGroupMembership",
+              "removeGroup",
+              "removeAllGroups",
+              "addGroupIfIdentify"
+            ]
+          },
+          "scenes": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 0
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 1
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 2
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 3
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 4
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6,
+              64,
+              65,
+              66
+            ],
+            "commandsReceived": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              64,
+              65,
+              66
+            ]
+          },
+          "onOff": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 0,
+                "name": "onOff",
+                "value": false
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 16384
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 16385,
+                "name": "onTime",
+                "value": 0
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 16386,
+                "name": "offWaitTime",
+                "value": 0
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 16387
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [],
+            "commandsReceived": [
+              "setOff",
+              "setOn",
+              "toggle",
+              "offWithEffect",
+              "onWithRecallGlobalScene",
+              "onWithTimedOff"
+            ]
+          },
+          "levelControl": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 0,
+                "name": "currentLevel",
+                "value": 41
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 1,
+                "name": "remainingTime",
+                "value": 0
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 15
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 16,
+                "name": "onOffTransitionTime",
+                "value": 0
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 17,
+                "name": "onLevel",
+                "value": 255
+              },
+              {
+                "acl": [
+                  "readable",
+                  "writable",
+                  "reportable"
+                ],
+                "id": 16384
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [],
+            "commandsReceived": [
+              "moveToLevel",
+              "move",
+              "step",
+              "stop",
+              "moveToLevelWithOnOff",
+              "moveWithOnOff",
+              "stepWithOnOff",
+              "stopWithOnOff"
+            ]
+          },
+          "diagnostics": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 265
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 266
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 267
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 274
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 275
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 276
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 277
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 278
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 279
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 281
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 282
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 283
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 284
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 285
+              },
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [],
+            "commandsReceived": []
+          },
+          "touchlink": {
+            "attributes": [
+              {
+                "acl": [
+                  "readable",
+                  "reportable"
+                ],
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1
+              }
+            ],
+            "commandsGenerated": [
+              "scanResponse",
+              3,
+              17,
+              "networkJoinRouterResponse",
+              "networkJoinEndDeviceResponse",
+              64,
+              "getGroups.response",
+              66
+            ],
+            "commandsReceived": [
+              "getGroups",
+              66
+            ]
+          }
+        }
+      },
+      "242": {
+        "clusters": {}
+      }
+    }
+  }
