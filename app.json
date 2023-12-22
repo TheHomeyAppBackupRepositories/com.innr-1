@@ -15,7 +15,7 @@
     "lights"
   ],
   "brandColor": "#e3004a",
-  "version": "2.1.21",
+  "version": "2.1.25",
   "compatibility": ">=5.0.0",
   "platforms": [
     "local",
@@ -1510,8 +1510,10 @@
         "manufacturerName": "innr",
         "productId": [
           "FL 120 C",
+          "FL 122 C",
           "FL 130 C",
-          "FL 140 C"
+          "FL 140 C",
+          "FL 142 C"
         ],
         "endpoints": {
           "1": {
@@ -1928,7 +1930,8 @@
       "zigbee": {
         "manufacturerName": "innr",
         "productId": [
-          "OSL 130 C"
+          "OSL 130 C",
+          "OSL 132 C"
         ],
         "endpoints": {
           "1": {
@@ -2078,6 +2081,99 @@
         }
       },
       "id": "smart_plug"
+    },
+    {
+      "name": {
+        "en": "Outdoor Smartplug",
+        "nl": "Outdoor Smartplug",
+        "de": "Outdoor Smartplug"
+      },
+      "class": "socket",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "onoff"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "meter_power",
+              "measure_power"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "onoff"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "drivers/smart_plug_osp210/assets/images/large.png",
+        "small": "drivers/smart_plug_osp210/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "innr",
+        "productId": "OSP 210",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              10,
+              1794,
+              2820
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press and hold the button on the side for 5 seconds and release.",
+            "nl": "Druk de knop op de zijkant 5 seconden in en laat los.",
+            "de": "Drücken und halten Sie die Taste an der Seite für 5 Sekunden und lassen Sie sie dann wieder los."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "report_interval",
+          "type": "number",
+          "label": {
+            "en": "Report Interval",
+            "nl": "Report Interval"
+          },
+          "hint": {
+            "en": "This setting determines the max report Interval.",
+            "nl": "Deze instelling bepaalt de waarde waarop op zijn laatst het rapport wordt opgehaald.",
+            "de": "Diese Einstellung bestimmt das maximale Berichtsintervall."
+          },
+          "value": 60,
+          "attr": {
+            "step": 1,
+            "min": 30,
+            "max": 86400
+          }
+        }
+      ],
+      "id": "smart_plug_osp210"
     },
     {
       "name": {
@@ -2313,6 +2409,91 @@
       },
       "settings": [],
       "id": "smart_plug_sp222"
+    },
+    {
+      "name": {
+        "en": "SP240",
+        "nl": "SP240",
+        "de": "SP240"
+      },
+      "class": "socket",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "onoff",
+        "meter_power",
+        "measure_power",
+        "measure_current",
+        "measure_voltage"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "meter_power",
+              "measure_power",
+              "measure_current",
+              "measure_voltage"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "onoff"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "drivers/smart_plug_sp240/assets/images/large.png",
+        "small": "drivers/smart_plug_sp240/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "innr",
+        "productId": "SP 240",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              4096,
+              1794,
+              2820,
+              57345
+            ],
+            "bindings": [
+              6,
+              1794,
+              2820
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Press and hold the button on the side for 5 seconds and release.",
+            "nl": "Druk de knop op de zijkant 5 seconden in en laat los.",
+            "de": "Drücken und halten Sie die Taste an der Seite für 5 Sekunden und lassen Sie sie dann wieder los."
+          }
+        }
+      },
+      "settings": [],
+      "id": "smart_plug_sp240"
     },
     {
       "name": {
