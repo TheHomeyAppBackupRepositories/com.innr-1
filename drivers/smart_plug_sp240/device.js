@@ -43,13 +43,18 @@ class SmartPlugSP240 extends ZigBeeDevice {
     // Configuring the attribute reporting in combination with mapping it to a measure_power capability
     if (this.hasCapability('measure_power')) {
       if (typeof this.activePowerFactor !== 'number') {
-       const { acPowerMultiplier, acPowerDivisor } = await zclNode.endpoints[
-           this.getClusterEndpoint(CLUSTER.ELECTRICAL_MEASUREMENT)
-         ]
-         .clusters[CLUSTER.ELECTRICAL_MEASUREMENT.NAME]
-         .readAttributes('acPowerMultiplier', 'acPowerDivisor');
+          try {
+            const { acPowerMultiplier, acPowerDivisor } = await zclNode.endpoints[
+              this.getClusterEndpoint(CLUSTER.ELECTRICAL_MEASUREMENT)
+            ]
+            .clusters[CLUSTER.ELECTRICAL_MEASUREMENT.NAME]
+            .readAttributes('acPowerMultiplier', 'acPowerDivisor');
 
-       this.activePowerFactor = acPowerMultiplier / acPowerDivisor;
+            this.activePowerFactor = acPowerMultiplier / acPowerDivisor;
+          } catch (err) {
+            this.log('could not set this.activePowerFactor');
+            this.log(err);
+          }
       }
       this.registerCapability('measure_power', CLUSTER.ELECTRICAL_MEASUREMENT, {
         reportOpts: {
@@ -65,13 +70,18 @@ class SmartPlugSP240 extends ZigBeeDevice {
     // Configuring the attribute reporting in combination with mapping it to a measure_current capability
     if (this.hasCapability('measure_current')) {
       if (typeof this.acCurrentFactor !== 'number') {
-        const { acCurrentMultiplier, acCurrentDivisor } = await zclNode.endpoints[
-            this.getClusterEndpoint(CLUSTER.ELECTRICAL_MEASUREMENT)
-          ]
-          .clusters[CLUSTER.ELECTRICAL_MEASUREMENT.NAME]
-          .readAttributes('acCurrentMultiplier', 'acCurrentDivisor');
+        try {
+          const { acCurrentMultiplier, acCurrentDivisor } = await zclNode.endpoints[
+              this.getClusterEndpoint(CLUSTER.ELECTRICAL_MEASUREMENT)
+            ]
+            .clusters[CLUSTER.ELECTRICAL_MEASUREMENT.NAME]
+            .readAttributes('acCurrentMultiplier', 'acCurrentDivisor');
 
-        this.acCurrentFactor = acCurrentMultiplier/ acCurrentDivisor;
+            this.acCurrentFactor = acCurrentMultiplier/ acCurrentDivisor;
+          } catch (err) {
+            this.log('could not set this.acCurrentFactor');
+            this.log(err);
+          }
       }
       this.registerCapability('measure_current', CLUSTER.ELECTRICAL_MEASUREMENT, {
         reportOpts: {
@@ -87,12 +97,17 @@ class SmartPlugSP240 extends ZigBeeDevice {
     // Configuring the attribute reporting in combination with mapping it to a measure_voltage capability
     if (this.hasCapability('measure_voltage')) {
       if (typeof this.activePowerFactor !== 'number') {
-       const { acVoltageMultiplier, acVoltageDivisor } = await zclNode.endpoints[
-           this.getClusterEndpoint(CLUSTER.ELECTRICAL_MEASUREMENT)
-         ]
-         .clusters[CLUSTER.ELECTRICAL_MEASUREMENT.NAME]
-         .readAttributes('acVoltageMultiplier', 'acVoltageDivisor');
-      this.acVoltageFactor = acVoltageMultiplier / acVoltageDivisor;
+        try {
+          const { acVoltageMultiplier, acVoltageDivisor } = await zclNode.endpoints[
+            this.getClusterEndpoint(CLUSTER.ELECTRICAL_MEASUREMENT)
+          ]
+          .clusters[CLUSTER.ELECTRICAL_MEASUREMENT.NAME]
+          .readAttributes('acVoltageMultiplier', 'acVoltageDivisor');
+          this.acVoltageFactor = acVoltageMultiplier / acVoltageDivisor;
+        } catch (err) {
+        this.log('could not set this.acVoltageFactor');
+        this.log(err);
+        }
       }
       this.registerCapability('measure_voltage', CLUSTER.ELECTRICAL_MEASUREMENT, {
         reportOpts: {

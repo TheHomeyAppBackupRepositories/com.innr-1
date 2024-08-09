@@ -15,7 +15,7 @@
     "lights"
   ],
   "brandColor": "#e3004a",
-  "version": "2.1.25",
+  "version": "2.1.31",
   "compatibility": ">=5.0.0",
   "platforms": [
     "local",
@@ -194,7 +194,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=dimmable_bulb|dimmable_e14|dimmable_gu10|dimmable_puck|dimmable_spot|led_strip|rgbw_bulb|rgbw_bulb_z3|rgbw_strip|rgbw_e14|rgbw_gu10|tunable_bulb|tunable_e14|tunable_gu10|RSL110V2|filament_bulb_vintage|filament_bulb_white|big_filament_bulb_vintage|long_filament_bulb_vintage|rgbw_ofl|rgbw_osl|rgbw_fl|rgbw_opl|RCL|RCL240T|rgbw_ogl"
+            "filter": "driver_id=dimmable_bulb|dimmable_e14|dimmable_gu10|dimmable_puck|dimmable_spot|led_strip|rgbw_bulb|rgbw_bulb_z3|rgbw_strip|rgbw_e14|rgbw_gu10|tunable_bulb|tunable_e14|tunable_gu10|RSL110V2|filament_bulb_vintage|filament_bulb_white|big_filament_bulb_vintage|long_filament_bulb_vintage|rgbw_ofl|rgbw_osl|rgbw_osl_big|rgbw_fl|rgbw_opl|RCL|RCL240T|rgbw_ogl|dimmable_bulb_string_outside"
           },
           {
             "title": {
@@ -253,7 +253,7 @@
           {
             "name": "device",
             "type": "device",
-            "filter": "driver_id=dimmable_bulb|dimmable_e14|dimmable_gu10|dimmable_puck|dimmable_spot|led_strip|rgbw_bulb|rgbw_bulb_z3|rgbw_strip|rgbw_e14|rgbw_gu10|tunable_bulb|tunable_e14|tunable_gu10|RSL110V2|filament_bulb_vintage|filament_bulb_white|big_filament_bulb_vintage|long_filament_bulb_vintage|rgbw_ofl|rgbw_osl|rgbw_fl|rgbw_opl|RCL|RCL240T|rgbw_ogl"
+            "filter": "driver_id=dimmable_bulb|dimmable_e14|dimmable_gu10|dimmable_puck|dimmable_spot|led_strip|rgbw_bulb|rgbw_bulb_z3|rgbw_strip|rgbw_e14|rgbw_gu10|tunable_bulb|tunable_e14|tunable_gu10|RSL110V2|filament_bulb_vintage|filament_bulb_white|big_filament_bulb_vintage|long_filament_bulb_vintage|rgbw_ofl|rgbw_osl|rgbw_osl_big|rgbw_fl|rgbw_opl|RCL|RCL240T|rgbw_ogl|dimmable_bulb_string_outside"
           }
         ]
       }
@@ -563,9 +563,11 @@
           "RB 165",
           "RB 175 W",
           "BY 165",
+          "RB 262",
           "RB 265",
           "BY 265",
-          "RB 266"
+          "RB 266",
+          "RB 267"
         ],
         "endpoints": {
           "1": {
@@ -595,6 +597,72 @@
       },
       "settings": [],
       "id": "dimmable_bulb"
+    },
+    {
+      "name": {
+        "en": "Outside Dimmable Bulb String",
+        "nl": "Buiten Dimbare Licht Slinger",
+        "de": "Dimmbare Lampe xxxxxxxx"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true,
+            "getOnStart": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "innr",
+        "productId": [
+          "OLS 210"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              4096
+            ],
+            "bindings": [
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Toggle the bulb to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the bulb by toggling it 6 times very quickly. It will flash twice to indicate it has been reset.",
+            "nl": "Zet de lamp uit en weer aan.\n\nWordt de lamp niet automatisch toegevoegd binnen 20 seconden, probeer hem dan te resetten door snel 6 keer de lamp aan en uit te zetten. De lamp zal twee keer knipperen om aan te geven dat hij is gereset.",
+            "de": "Um das Pairing zu starten, schalten Sie die Lampe aus und wieder ein.\n\nWenn das Pairing nicht innerhalb von 20 Sekunden automatisch beginnt, dann versuchen Sie die Lampe zurückzusetzen, indem Sie sie 6 Mal schnell ein- und ausschalten. Zur Bestätigung blinkt die Lampe zweimal."
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/dimmable_bulb_string_outside/assets/images/large.png",
+        "small": "/drivers/dimmable_bulb_string_outside/assets/images/small.png"
+      },
+      "settings": [],
+      "id": "dimmable_bulb_string_outside"
     },
     {
       "name": {
@@ -629,6 +697,7 @@
         "manufacturerName": "innr",
         "productId": [
           "RB 145",
+          "RB 243",
           "RB 245"
         ],
         "endpoints": {
@@ -1958,6 +2027,85 @@
     },
     {
       "name": {
+        "en": "RGBW OSL BIG Spots",
+        "nl": "RGBW OSL BIG Spots",
+        "de": "RGBW OSL BIG Spots"
+      },
+      "class": "light",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "images": {
+        "large": "drivers/rgbw_osl_big/assets/images/large.png",
+        "small": "drivers/rgbw_osl_big/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "innr",
+        "productId": [
+          "OSL 140 C"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Power On the device to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling the power 6 times with a 1 second interval. It will flash to indicate it has been reset.",
+            "nl": "Voorzie de voeding van stroom.\n\nWordt de controller niet automatisch toegevoegd binnen 20 seconden, probeer dan de controller te resetten door 6 keer de stroom te onderbreken met 1 seconde tussenpauze. De lampen zullen knipperen om aan te geven dat hij is gereset.",
+            "de": "Um das Pairing zu starten, schließen Sie die Spots an.\n\nWenn das Pairing nicht innerhalb von 20 Sekunden automatisch beginnt, dann versuchen Sie die Spots zurückzusetzen, indem Sie den Stecker in einem 1 Sekunden Intervall 6 Mal aus- und einstecken. Zur Bestätigung blinken die Spots."
+          }
+        }
+      },
+      "settings": [],
+      "id": "rgbw_osl_big"
+    },
+    {
+      "name": {
         "en": "RGBW LEDSTRIP",
         "nl": "RGBW LEDSTRIP",
         "de": "RGBW LED-Strip"
@@ -2462,7 +2610,11 @@
       },
       "zigbee": {
         "manufacturerName": "innr",
-        "productId": "SP 240",
+        "productId": [
+          "SP 240",
+          "SP 242",
+          "SP 244"
+        ],
         "endpoints": {
           "1": {
             "clusters": [
@@ -2534,6 +2686,7 @@
         "productId": [
           "BY 178 T",
           "RB 178 T",
+          "RB 272 T",
           "RB 278 T",
           "RB 279 T"
         ],
@@ -2604,6 +2757,7 @@
         "manufacturerName": "innr",
         "productId": [
           "RB 148 T",
+          "RB 247 T",
           "RB 248 T",
           "RB 249 T"
         ],
